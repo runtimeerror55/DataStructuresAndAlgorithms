@@ -1,6 +1,6 @@
 let input = ["0", "0", "0", "1", "2", "3", "4"]
 
-function stringToNuber(input) {
+function stringToNumber(input) {
     if (input[0] === undefined) {
         return 0;
     }
@@ -9,5 +9,5 @@ function stringToNuber(input) {
 
 }
 
-let answer = stringToNuber(input)
+let answer = stringToNumber(input)
 console.log(answer)
