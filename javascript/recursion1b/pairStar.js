@@ -13,9 +13,7 @@ function pairStar(input, currentIndex) {
     }
     if (input[currentIndex] == input[currentIndex + 1]) {
         shiftCharacters(input, currentIndex + 1)
-        //console.log(input)
         input[currentIndex + 1] = '*'
-        //console.log(input)
     }
     pairStar(input, currentIndex + 1)
 }
