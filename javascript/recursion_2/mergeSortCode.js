@@ -8,12 +8,10 @@ function merge(input, start, mid, end) {
     let j = mid + 1;
     while (i < mid + 1 && j < end + 1) {
         if (input[i] < input[j]) {
-            console.log(input[i] + " " + input[j])
             outputArray.push(input[i++]);
         }
         else {
             outputArray.push(input[j++])
-            console.log(input[i] + " " + input[j])
         }
     }
 
