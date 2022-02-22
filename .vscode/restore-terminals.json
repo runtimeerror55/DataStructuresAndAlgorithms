@@ -1,0 +1,34 @@
+{
+    "artificialDelayMilliseconds": 300,
+    "keepExistingTerminalsOpen": false,
+    "runOnStartup": true,
+    "terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "DSA"
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "c++",
+                    "commands": [
+                        "cd c++"
+                    ]
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "javascript",
+                    "commands": [
+                        "cd javascript"
+                    ]
+                }
+            ]
+        }
+    ]
+}
