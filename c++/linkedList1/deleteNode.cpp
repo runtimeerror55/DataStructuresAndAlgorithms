@@ -18,13 +18,25 @@ Node *deleteNode(Node *head, int i)
 
     if (head == NULL)
     {
-        return NULL;
+        return head;
     }
     if (i == 0)
     {
         return head->next;
     }
-    head->next = deleteNode(head->next, i - 1);
+    Node *temp = head;
+    Node *previous = NULL;
+    int currentPosition = 0;
+    while (temp != NULL && currentPosition < i - 1)
+    {
+        temp = temp->next;
+        currentPosition++;
+    }
+    if (temp != NULL && temp->next != NULL)
+    {
+        temp->next = temp->next->next;
+    }
+
     return head;
 }
 
