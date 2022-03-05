@@ -13,13 +13,13 @@ public:
     }
 };
 
-Node *reverseLinkedListRecursive(Node *head)
+Node *reverseLinkedList(Node *head)
 {
     if (head == NULL || head->next == NULL)
     {
         return head;
     }
-    Node *smallHead = reverseLinkedListRecursive(head->next);
+    Node *smallHead = reverseLinkedList(head->next);
     head->next->next = head;
     head->next = NULL;
     return smallHead;
@@ -66,7 +66,7 @@ int main()
     while (t--)
     {
         Node *head = takeinput();
-        head = reverseLinkedListRecursive(head);
+        head = reverseLinkedList(head);
         print(head);
     }
 
