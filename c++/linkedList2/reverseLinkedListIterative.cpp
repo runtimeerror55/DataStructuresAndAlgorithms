@@ -22,17 +22,17 @@ Node *reverseLinkedList(Node *head)
     }
     Node *currentNode = head;
     Node *previousNode = NULL;
-    Node *nextNode = head->next;
+    Node *nextNode = NULL;
 
-    while (currentNode->next != NULL)
+    while (currentNode != NULL)
     {
+        nextNode = currentNode->next;
         currentNode->next = previousNode;
         previousNode = currentNode;
         currentNode = nextNode;
-        nextNode = nextNode->next;
     }
-    currentNode->next = previousNode;
-    return currentNode;
+
+    return previousNode;
 }
 
 Node *takeinput()
