@@ -21,11 +21,8 @@ public:
 
 int getLeafNodeCount(TreeNode<int> *root)
 {
-    if (root == NULL)
-    {
-        return 0;
-    }
-    else if (root->children.size() == 0)
+
+    if (root->children.size() == 0)
     {
         return 1;
     }
