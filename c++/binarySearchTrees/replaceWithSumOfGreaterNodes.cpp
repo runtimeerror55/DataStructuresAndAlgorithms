@@ -38,7 +38,7 @@ int helper(BinaryTreeNode<int> *root, int sum)
 }
 void replaceWithLargerNodesSum(BinaryTreeNode<int> *root)
 {
-    int SubAnswer = helper(root, 0);
+    helper(root, 0);
 }
 
 BinaryTreeNode<int> *takeInput()
