@@ -17,20 +17,20 @@ public:
     }
 };
 
-void helper(BinaryTreeNode<int> *root, int sum, vector<int> &v)
+void helper(BinaryTreeNode<int> *root, vector<int> &v)
 {
     if (root == NULL)
     {
         return;
     }
     v.push_back(root->data);
-    helper(root->left, sum, v);
-    helper(root->right, sum, v);
+    helper(root->left, v);
+    helper(root->right, v);
 }
 void pairSum(BinaryTreeNode<int> *root, int sum)
 {
     vector<int> v;
-    helper(root, sum, v);
+    helper(root, v);
     sort(v.begin(), v.end());
     int i = 0;
     int j = v.size() - 1;
