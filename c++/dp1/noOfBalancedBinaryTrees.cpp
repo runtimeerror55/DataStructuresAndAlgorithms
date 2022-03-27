@@ -3,20 +3,16 @@ using namespace std;
 #define modulo 10e+9
 int balancedBTs(int n)
 {
-    long long int mod = 1e9 + 7;
-    long long int dp[n + 1];
-    for (int i = 0; i < n; i++)
+    if (n <= 1)
     {
-        dp[i] = 0;
+        return 1;
     }
 
-    dp[0] = 1;
-    dp[1] = 1;
-    for (int i = 2; i < n + 1; i++)
-    {
-        dp[i] = ((dp[i - 1] * dp[i - 1]) % mod + (dp[i - 2] * dp[i - 1] * 2) % mod) % mod;
-    }
-    return dp[n];
+    long long int mod = 1e9 + 7;
+    long long x = balancedBTs(n - 1);
+    long long y = balancedBTs(n - 2);
+
+    return ((x * x) % mod + (2 * x * y) % mod) % mod;
 }
 
 int main()
