@@ -14,7 +14,7 @@ int minCount(int n)
     dp[2] = 2;
     for (int i = 3; i < n + 1; i++)
     {
-        dp[i] = i;
+        dp[i] = INT_MAX;
         for (int j = 1; j <= floor(sqrt(i)); j++)
         {
             int square = j * j;
