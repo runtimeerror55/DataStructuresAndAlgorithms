@@ -17,7 +17,11 @@ int main()
     {
         long long int a, b;
         cin >> a >> b;
-        if (a % 2 == 0 || b % 2 == 0)
+        if (a == 1 || b == 1)
+        {
+            cout << -1 << endl;
+        }
+        else if (a % 2 == 0 && b % 2 == 0)
         {
             cout << 0 << endl;
         }
@@ -26,11 +30,11 @@ int main()
             long long int x = gcd(a, b);
             if (x == 1)
             {
-                cout << x << endl;
+                cout << 1 << endl;
             }
             else
             {
-                cout << x << endl;
+                cout << 0 << endl;
             }
         }
     }
