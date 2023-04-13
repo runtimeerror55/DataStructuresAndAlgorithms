@@ -85,5 +85,5 @@ int main()
 {
     BinaryTreeNode<int> *root = takeInput();
     cout << (isBalanced(root) ? "true" : "false");
-    cout<<" ";
+    
 }
